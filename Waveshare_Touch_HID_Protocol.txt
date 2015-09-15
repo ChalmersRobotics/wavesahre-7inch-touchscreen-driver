@@ -1,0 +1,33 @@
+Waveshare 7inch capacitive touch screen HID protocol
+====================================================
+http://www.waveshare.com/w/upload/7/73/7inch-HDMI-LCD-B-UserManual.pdf
+
+The Frame lengths are fixed at 25 bytes.
+
+Byte	Description
+Byte 1	The frame header is 0xAA.
+Byte 2	Touch flag (1: valid touch data. 0: The flag of touch finished)
+Byte 3	The x - coordinate high byte of the 1st touch point.
+Byte 4	The x - coordinate low byte of the 1st touch point.
+Byte 5	The y - coordinate high byte of the 1st touch point.
+Byte 6	The y - coordinate low byte of the 1st touch point.
+Byte 7	The 1st touch finished flag is 0xBB. Raspberry Pi only uses the first 7 Bytes.
+Byte 8	The quantity of touch coordinates (1~5)
+Byte 9	The x - coordinate high byte of the 2nd touch point.
+Byte 1	The x - coordinate low byte of the 2nd touch point.
+Byte 1	The y - coordinate high byte of the 2nd touch point.
+Byte 1	The y - coordinate low byte of the 2nd touch point.
+Byte 1	The x - coordinate high byte of the 3rd touch point.
+Byte 1	The x - coordinate low byte of the 3rd touch point.
+Byte 1	The y - coordinate high byte of the 3rd touch point.
+Byte 1	The y - coordinate low byte of the 3rd touch point.
+Byte 1	The x - coordinate high byte of the 4th touch point.
+Byte 1	The x - coordinate low byte of the 4th touch point.
+Byte 1	The y - coordinate high byte of the 4 th touch point.
+Byte 2	The y - coordinate low byte of the 4th touch point.
+Byte 2	The x - coordinate high byte of the 5th touch point.
+Byte 2	The x - coordinate low byte of the 5th touch point.
+Byte 2	The y - coordinate high byte of the 5th touch point.
+Byte 2	The y - coordinate low byte of the 5th touch point.
+Byte 2	The Frame end is 0xCC.
+
